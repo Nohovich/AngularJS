@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html ng-app="dataApp">
+
+<head>
+    <title>Clock!</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="parentCtrl">
+
+        <table border="1">
+            <tr style="background:lightyellow ; padding: 10px">
+                <th>USER-ID</th>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>COMPLETED</th>
+            </tr>
+            <tr ng-repeat="m in todos">
+                <td>{{m.userId}}</td>
+                <td>{{m.id}}</td>
+                <td>{{m.title}}</td>
+                <td>{{m.completed}}</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+
+    <br>
+</body>
+
+</html>

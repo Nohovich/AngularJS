@@ -1,0 +1,28 @@
+﻿<!-- Modules are the angular application's equivalent of the Main() method.
+    Modules declaratively specify how the angular application should be bootstrapped.  -->
+<!--
+    In angular a controller is a JavaScript function. The job of the controller is to build a model for the view to display.
+    The model is the data. In a real world application, the controller may call into a service to retrieve data from the database.
+    -->
+<!doctype html>
+<!-- Associate the module name with ng-app directive -->
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+    <!-- the controller is available only to this div -->
+    <div ng-controller="myController">
+        <!-- geting the message of the controller  -->
+        {{ message }}
+    </div>
+    <!--  <!-- the controller is available only to this div --> -->
+    <div ng-controller="myControlleremployee">
+        <!-- getting the json fields -->
+        <div>First Name : {{ employee.firstName }}</div>
+        <div>Last Name : {{ employee.lastName }}</div>
+        <div>Gender : {{ employee.gender}}</div>
+    </div>
+</body>
+</html>

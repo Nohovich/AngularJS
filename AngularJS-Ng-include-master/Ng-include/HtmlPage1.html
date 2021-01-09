@@ -1,0 +1,35 @@
+﻿<!-- ng-include directive is used to embed an HTML page into another HTML page.
+    This technique is extremely useful when you want to reuse a specific view in multiple pages in your application.
+ -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <!--  we are using ng-include directive and the value for it is the name of the HTML file that we want to reuse. -->
+        <div ng-include="'EmployeeTable.html'">
+        </div>
+    </div>
+    <br />
+    <!--  Set the property employeeList that you have attached to the $scope object, as the value for ng-include directive -->
+    <div ng-controller="myController">
+        <div ng-include="employeeList"></div>
+    </div>
+    <br />
+    <div ng-controller="myController">
+        Select View :
+        <select ng-model="employeeView">
+            <option value="EmployeeTable.html">Table</option>
+            <option value="EmployeeList.html">List</option>
+        </select>
+        <br /><br />
+        <div ng-include="employeeView">
+        </div>
+    </div>
+</body>
+</html>

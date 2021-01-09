@@ -1,0 +1,43 @@
+﻿<!-- Angular routing single layout page, and then we can inject and swap out different views depending on the URL the end user has requested. -->
+<!-- index.html is the layout viewhome.html, courses.html & students.html will be injected into the layout view(index.html) depending on the URL the end user has requested -->
+<!-- The partial templates (home.html, courses.html & students.html) will be injected into the location where we have ng-view directive.  -->
+<!-- For linking to partial templates we are using # symbol in the href attribute. This tells the browser not to navigate away from index.html. we can get rid of the # symbol. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Demo">
+<head>
+    <title></title>
+    <!-- Specify a default URL and a default target for all links on a page -->
+    <!-- / = root directory -->
+    <base href="/" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route-min.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <table style="font-family: Arial">
+        <tr>
+            <td colspan="2" class="header">
+                <h1>
+                    WebSite Header
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftMenu">
+                <a href="home">Home</a>
+                <a href="courses">Courses</a>
+                <a href="students">Students</a>
+            </td>
+            <td class="mainContent">
+                <ng-view></ng-view>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer">
+                <b>Website Footer</b>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

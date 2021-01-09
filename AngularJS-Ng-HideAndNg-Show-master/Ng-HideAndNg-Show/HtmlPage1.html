@@ -1,0 +1,62 @@
+﻿<!-- ng-hide and ng-show directives are used to control the visibility of the HTML elements. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <!-- The following code masks and unmasks the Salary column values using ng-hide and ng-show directives,
+            depending on the checked status of the Hide Salary checkbox. -->
+        <input type="checkbox" ng-model="hideSalary" />Hide Salary
+        <br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th ng-hide="hideSalary">Salary</th>
+                    <th ng-show="hideSalary">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender}} </td>
+                    <td> {{ employee.city}} </td>
+                    <td ng-hide="hideSalary"> {{ employee.salary  }} </td>
+                    <td ng-show="hideSalary"> ##### </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-controller="myController">
+        <!-- When the checkbox is checked, hideSalary variable will be attached to the $scope object and true value is stored in it.
+            This value is then used by the ng-hide directive to hide the salary td and it's th element. -->
+        <input type="checkbox" ng-model="hideSalary" />Hide Salary
+        <br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th ng-hide="hideSalary">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender}} </td>
+                    <td> {{ employee.city}} </td>
+                    <td ng-hide="hideSalary"> {{ employee.salary  }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

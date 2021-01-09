@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="dataApp">
+
+<head>
+    <title>Clock!</title>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/Script.js"></script>
+
+    <script src="../../Scripts/mybootstrap.js"></script>
+    <script src="../../Scripts/parentCtrl.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="parentCtrl">
+        <p>Data from value service : <b>{{x}}</b></p>
+        <directive-name title="Hello World!"
+                        y="x"
+                        click-func="clickme">
+
+        </directive-name>
+
+
+    </div>
+
+
+    <br>
+</body>
+
+</html>

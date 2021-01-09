@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="dataApp">
+
+<head>
+    <title>Clock!</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+
+  
+</head>
+
+<body>
+
+    <p ng-hide="1 == 1">1</p>
+    <div ng-controller="parentCtrl as p">
+        <p>Parent {{x}} -- will not work</p>
+        <p>Parent {{p.x}}</p>
+        <div ng-controller="childCtrl as c">
+            <p>Child X = {{c.x}}</p> <!-- child -- this.x-->
+            <p>Child Y = {{y}}</p> <!-- $scope.y -->
+            <p>Child to Parent X = {{p.x}}</p>
+            <p>Child X = {{x}} -- will not work</p>
+        </div>
+    </div>
+    <div ng-controller="uncleCtrl">
+        <button ng-click="printValue()">Click</button>
+    </div>
+
+    <br>
+</body>
+
+</html>

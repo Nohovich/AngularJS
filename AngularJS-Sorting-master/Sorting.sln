@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{5EAC988A-B72A-46FB-98B6-601BB8F7B361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortRowsByTableHeader", "SortRowsByTableHeader\SortRowsByTableHeader.csproj", "{0D2E97E9-2AB7-4CD5-8487-37BA6B6FFEAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAC988A-B72A-46FB-98B6-601BB8F7B361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAC988A-B72A-46FB-98B6-601BB8F7B361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAC988A-B72A-46FB-98B6-601BB8F7B361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAC988A-B72A-46FB-98B6-601BB8F7B361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D2E97E9-2AB7-4CD5-8487-37BA6B6FFEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2E97E9-2AB7-4CD5-8487-37BA6B6FFEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D2E97E9-2AB7-4CD5-8487-37BA6B6FFEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D2E97E9-2AB7-4CD5-8487-37BA6B6FFEAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {384807A3-5FA7-432E-9B82-F66FA54262A8}
+	EndGlobalSection
+EndGlobal

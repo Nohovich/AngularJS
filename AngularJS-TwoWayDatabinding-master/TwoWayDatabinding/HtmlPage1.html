@@ -1,0 +1,81 @@
+﻿<!--
+    When the view loads, the model data is display in both, the textbox and td elements on the page.
+    As you start to type in any of the textboxes, the respective employee model object property is updated,
+    and the change is immediately reflected in the respective td element.
+    When the view loads, the model data is display in both, the textbox and td elements on the page. 
+    As you start to type in any of the textboxes, the respective employee model object property is updated,
+    and the change is immediately reflected in the respective td element.
+    -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    <!-- the input element is decorated with ng-model directive.
+                        This ensures that whenever the value in the textbox is changed,
+                        angular will automatically update the message property of the $scope object. -->
+                    <input type="text" placeholder="Firstname"
+                           ng-model="employee.firstName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    <input type="text" placeholder="Lastname"
+                           ng-model="employee.lastName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="text" placeholder="Gender"
+                           ng-model="employee.gender" />
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <table>
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    {{ employee.firstName }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    {{ employee.lastName }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    {{ employee.gender }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!-- ng-repeat is similar to foreach loop in C#.  -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <!-- we are using ng-repeat directive which loops thru each country in countries array. For each country,
+    we a get a table row, and in each table cell of the table row, the respective countries details   -->
+        <ul ng-repeat="country in countries">
+            <li>
+                {{country.name}}
+                <ul>
+                    <!--we are using two ng-repeat directives in the view, one nested inside the other.
+                        The outer ng-repeat directive loops thru each country in the model.
+                        The inner ng-repeat directive loops thru each city of a given country. -->
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul ng-repeat="country in countries" ng-init="parentIndex = $index">
+            <li>
+                <!--  find the index of an item in the collection use $index property -->
+                {{country.name}} - Index = {{ $index }}
+                <ul>
+                    <!-- get the index of the parent element Use $parent.$index or -->
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}} - Parent Index = {{ parentIndex }}, Index = {{ $index }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

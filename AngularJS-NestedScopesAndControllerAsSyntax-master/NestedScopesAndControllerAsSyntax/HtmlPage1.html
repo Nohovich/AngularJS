@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="Demo">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+    <!-- we are able to use the respective controller object and retrieve name property value. Now there is no need to juggle with $parent property. -->
+    <div ng-controller="countryController as countryCtrl">
+        {{countryCtrl.name}}
+        <div ng-controller="stateController as stateCtrl">
+            {{countryCtrl.name}} - {{stateCtrl.name}}
+            <div ng-controller="cityController as cityCtrl">
+                {{countryCtrl.name}} - {{stateCtrl.name}} - {{cityCtrl.name}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
